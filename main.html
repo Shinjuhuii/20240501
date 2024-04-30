@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹사이트 타이틀</title>
+
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+
+<body>
+  <div class="menuu">
+    <div class="logo" onclick="location.href='index.html';">
+        <img src="https://ifh.cc/g/d7dD7y.png" alt="로고">
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">TICKET</a></li>
+            <li><a href="#">VVIP</a></li>
+            <li><a href="#">LINE UP</a></li>
+            <li><a href="#">MEDIA</a></li>
+            <li><a href="#">GUIDE</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+  <div class="container">
+    <!-- 추가된 카드 -->
+    <div class="card" style="--clr:#FF2400 " onclick="location.href='index.html';"><img src="https://ifh.cc/g/whRzYy.jpg" alt="이미지 1"><span>2022</span></div>
+    <div class="card" style="--clr:#003DFF" onclick="location.href='index2.html';"><img src="https://ifh.cc/g/hpfkQa.jpg" alt="이미지 1"><span>2023</span></div>
+    <div class="card" onclick="location.href='index3.html';"><img src="https://ifh.cc/g/wPMmwq.jpg" alt="이미지 1"><span>2024</span></div> <!-- 빨간색으로 변경될 카드 -->
+  </div>
+  <script>
+    let cards = document.querySelectorAll('.card')
+    cards.forEach(card => {
+        card.onmousemove = function(e){
+            let x = e.pageX - card.offsetLeft;
+            let y = e.pageY - card.offsetTop;
+
+            card.style.setProperty('--x', x + 'px')
+            card.style.setProperty('--y', y + 'px')
+        }
+    });
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
